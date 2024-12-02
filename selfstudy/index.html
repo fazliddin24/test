@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sirli O'yin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--<div class="login-container">-->
+<!--    <form class="login-form">-->
+<!--        <h2>Kirish</h2>-->
+<!--        <div class="yoz">-->
+<!--            <label for="username">Username</label>-->
+<!--            <input type="text" id="username" placeholder="Foydalanuvchi nomini kiriting" required>-->
+<!--        </div>-->
+<!--        <div class="yoz">-->
+<!--            <label for="password">Password</label>-->
+<!--            <input type="password" id="password" placeholder="Parolingizni kiriting" required>-->
+<!--        </div>-->
+<!--        <button type="submit">Login</button>-->
+<!--        <p class="roy">Sizda hisob yo'qmi <a href="#">Ro'yhatdan o't</a></p>-->
+<!--    </form>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form with Effects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .background-shape {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(76, 175, 80, 0.3);
+            filter: blur(150px);
+            border-radius: 50%;
+            animation: move 6s infinite alternate;
+        }
+
+        .background-shape:nth-child(1) {
+            top: -50px;
+            left: -50px;
+        }
+
+        .background-shape:nth-child(2) {
+            top: 50%;
+            left: 70%;
+            background: rgba(0, 123, 255, 0.3);
+            animation-duration: 80s;
+        }
+
+        .background-shape:nth-child(33) {
+            top: 70%;
+            left: -20%;
+            background: rgba(255, 193, 7, 0.3);
+            animation-duration: 100s;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0) scale(3);
+            }
+            100% {
+                transform: translate(0px, 0px) scale(2.2);
+            }
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 400px;
+            z-index: 1;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .yoz {
+            margin-bottom: 15px;
+        }
+
+        .yoz label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .yoz input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .roy {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .roy a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .roy a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<!-- Background Shapes -->
+<div class="background-shape"></div>
+<div class="background-shape"></div>
+<div class="background-shape"></div>
+
+<!-- Login Form -->
+<div class="login-container">
+    <form class="login-form">
+        <h2>Kirish</h2>
+        <div class="yoz">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Foydalanuvchi nomini kiriting" required>
+        </div>
+        <div class="yoz">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Parolingizni kiriting" required>
+        </div>
+        <button type="submit">Login</button>
+        <p class="roy">Sizda hisob yo'qmi <a href="#">Ro'yhatdan o't</a></p>
+    </form>
+</div>
+</body>
+</html>
+
+</div>
+</body>
+
+<script src="script.js"></script>
+</html>

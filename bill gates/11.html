@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="icon" href="">
+    <title>Position</title>
+    <head>
+        <style>
+            .card_border {
+                border: 2px solid gray;
+                padding: 10px;
+                width: 800px;
+                height: 500px;
+                display: inline-block;
+                text-align: center;
+            }
+
+            .active {
+                border-color: green;
+                background-color: #e0ffe0;
+                align-items: center;
+            }
+
+            .inactive {
+                border-color: red;
+                background-color: #ffe0e0;
+                align-items: center;
+            }
+            .display{
+                display: none;
+            }
+        </style>
+    </head>
+<body>
+<div class="promo">
+    <div class="card_border inactive" id="card">
+        <div class="card_border_name">
+            Bill Gates
+        </div>
+        <button id="button">Bilish</button>
+    </div>
+</div>
+
+<div class="text display"><p>William Henry Gates III (born October 28, 1955) is an American businessman and philanthropist best
+    known for his roles at Microsoft Corporation. He co-founded the software company with his childhood friend Paul
+    Allen and later held the positions of chairman, chief executive officer (CEO), president, and chief software
+    architect. He was also being its largest individual shareholder until May 2014.[a] He was a pioneer of the
+    microcomputer revolution of the 1970s and 1980s.
+
+    Gates was born and raised in Seattle, Washington. In 1975, he and Allen founded Microsoft in Albuquerque, New
+    Mexico. Gates led the company as its chairman and chief executive officer until stepping down as CEO in January
+    2000, succeeded by Steve Ballmer, but he remained chairman of the board of directors and became chief software
+    architect. During the late 1990s, he was criticized for his business tactics, which were considered
+    anti-competitive.
+
+    In June 2008, Gates transitioned into a part-time role at Microsoft and full-time work at the Bill & Melinda Gates
+    Foundation, the private charitable foundation he and his then-wife Melinda had established in 2000. He stepped down
+    as chairman of the Microsoft board in February 2014 and assumed the role of technology adviser to support newly
+    appointed CEO Satya Nadella. In March 2020, Gates left his board positions at Microsoft and Berkshire Hathaway to
+    focus on his philanthropic efforts on climate change, global health and development, and education.</p></div>
+
+
+<script>
+    const button = document.getElementById('button');
+    const text = document.querySelector('.text');
+
+    button.addEventListener('click', () => {
+        text.classList.toggle('display')});
+</script>
+</body>
+</html>
