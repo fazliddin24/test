@@ -189,9 +189,6 @@
 const button = document.getElementById('button');
 const bgdiv = document.querySelector('.bgdiv');
 
-
-
-
 button.addEventListener('click', () => {
     bgdiv.style.display = 'flex';
 });
