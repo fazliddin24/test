@@ -191,10 +191,12 @@ const bgdiv = document.querySelector('.bgdiv');
 
 button.addEventListener('click', () => {
     bgdiv.style.display = 'flex';
+    bgdiv.classList.add('active')
 });
 
 function closeBox() {
     document.getElementById('bgdiv').style.display = 'none';
+    bgdiv.classList.remove('active')
 }
 
 bgdiv.addEventListener('click', (event) => {
