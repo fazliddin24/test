@@ -43,6 +43,8 @@ body {
     font-size: 16px;
     font-weight: bold;
     user-select: none;
+    position: relative;
+    display: flex;
 }
 
 button {
@@ -50,45 +52,38 @@ button {
     margin-left: 10px;
     margin-right: 10px;
 }
-
-.red {
-    background-color: #3498db;
+span{
+    color: red;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 280px;
 }
 
-.bgdiv {
-    position: absolute;
-    bottom: -100%;
+.bgnew {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#bgdiv {
     position: absolute;
-    bottom: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
+    top: 0;
+    display: none;
     justify-content: center;
     align-items: center;
     transition: 0.5s all;
 }
-
-.active {
-    bottom: 0 !important;
+.flex{
+    display: flex !important;
 }
-.box{
+#bgdiv {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
+    position: relative;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
 }
 .box1{
-    position: relative;
     background-color: #007bff;
     padding: 20px;
     border-radius: 10px;
@@ -96,6 +91,7 @@ button {
     height: 500px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     color: white;
+    gap: 15px;
 }
 #html{
     width: 290px;
@@ -110,43 +106,6 @@ button {
     height: 260px;
     border-radius: 15px;
 }
-#html:active{
-    align-items: center;
-    justify-content: center;
-    width: 280px;
-    border-radius: 15px;
-}
-#css:active{
-    align-items: center;
-    justify-content: center;
-    width: 280px;
-    border-radius: 15px;
-}
-#js:active{
-    align-items: center;
-    justify-content: center;
-    width: 280px;
-    border-radius: 15px;
-}
-.box2{
-    position: relative;
-    background-color: #007bff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    height: 500px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    color: white;
-}
-.box3{
-    position: relative;
-    background-color: #007bff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    height: 500px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    color: white;
-}
+
 
 
