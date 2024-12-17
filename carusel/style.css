@@ -42,3 +42,40 @@
 /*    border: 5px solid white;*/
 /*    border-radius: 10px;*/
 /*}*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.carousel img {
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+    transform-style: initial;
+    transform: translateX(50px);
+}
