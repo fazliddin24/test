@@ -52,30 +52,25 @@ body {
     background-color: #f0f0f0;
 }
 .carousel-container {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
 }
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 button:hover {
-    background-color: #0056b3;
+    background-color: #777474;
 }
 .carousel img {
     width: 800px;
     height: 600px;
-    object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid #ddd;
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
-    transform-style: initial;
-    transform: translateX(50px);
+    transform: translateX(-180%);
+
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
+.carousel img.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
