@@ -18,16 +18,14 @@
 
 .slider .buttons{
     position: absolute;
-    top: 45%;
-    left: 5%;
+    top: 90%;
+    left: 90%;
     width: 90%;
-    display: flex;
-    justify-content: space-between;
 }
 .slider .buttons button{
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 10%;
     background-color: #fff5;
     color: #fff;
 
