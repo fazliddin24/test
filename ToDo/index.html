@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Eslatmalar</h1>
+            <input type="text" id="task-input" placeholder="yozsen bo'ldi...">
+            <button id="add-btn">Mashq qo'sh</button>
+            <ul id="task-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>To-Do App</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            background-color: #121212;-->
+<!--            color: #ffffff;-->
+<!--            display: flex;-->
+<!--            justify-content: center;-->
+<!--            align-items: center;-->
+<!--            height: 100vh;-->
+<!--        }-->
+
+<!--        .todo-container {-->
+<!--            background-color: #ffffff;-->
+<!--            color: #000;-->
+<!--            padding: 20px;-->
+<!--            border-radius: 8px;-->
+<!--            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);-->
+<!--            width: 350px;-->
+<!--        }-->
+
+<!--        .todo-container h1 {-->
+<!--            font-size: 24px;-->
+<!--            margin-bottom: 20px;-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        .todo-container input[type="text"] {-->
+<!--            width: 100%;-->
+<!--            padding: 10px;-->
+<!--            border: 1px solid #ddd;-->
+<!--            border-radius: 4px;-->
+<!--            margin-bottom: 10px;-->
+<!--        }-->
+
+<!--        .todo-container button {-->
+<!--            padding: 10px 15px;-->
+<!--            border: none;-->
+<!--            border-radius: 4px;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+
+<!--        .add-btn {-->
+<!--            background-color: #007bff;-->
+<!--            color: #ffffff;-->
+<!--        }-->
+
+<!--        .edit-btn {-->
+<!--            background-color: #ffc107;-->
+<!--            color: #ffffff;-->
+<!--            margin-right: 5px;-->
+<!--        }-->
+
+<!--        .delete-btn {-->
+<!--            background-color: #dc3545;-->
+<!--            color: #ffffff;-->
+<!--        }-->
+
+<!--        .todo-list {-->
+<!--            margin-top: 20px;-->
+<!--        }-->
+
+<!--        .todo-item {-->
+<!--            display: flex;-->
+<!--            justify-content: space-between;-->
+<!--            align-items: center;-->
+<!--            padding: 10px;-->
+<!--            border: 1px solid #ddd;-->
+<!--            border-radius: 4px;-->
+<!--            margin-bottom: 10px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="todo-container">-->
+<!--    <h1>To-Do App</h1>-->
+<!--    <input type="text" id="taskInput" placeholder="Add a new Task">-->
+<!--    <button class="add-btn" onclick="addTask()">Add</button>-->
+
+<!--    <div class="todo-list" id="todoList"></div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    function addTask() {-->
+<!--        const taskInput = document.getElementById('taskInput');-->
+<!--        const taskText = taskInput.value.trim();-->
+
+<!--        if (taskText === '') {-->
+<!--            alert('Please enter a task');-->
+<!--            return;-->
+<!--        }-->
+
+<!--        const todoList = document.getElementById('todoList');-->
+
+<!--        const todoItem = document.createElement('div');-->
+<!--        todoItem.className = 'todo-item';-->
+
+<!--        const taskSpan = document.createElement('span');-->
+<!--        taskSpan.textContent = taskText;-->
+
+<!--        const editButton = document.createElement('button');-->
+<!--        editButton.textContent = 'Edit';-->
+<!--        editButton.className = 'edit-btn';-->
+<!--        editButton.onclick = function () {-->
+<!--            const newTask = prompt('Edit your task:', taskSpan.textContent);-->
+<!--            if (newTask !== null) {-->
+<!--                taskSpan.textContent = newTask.trim();-->
+<!--            }-->
+<!--        };-->
+
+<!--        const deleteButton = document.createElement('button');-->
+<!--        deleteButton.textContent = 'Delete';-->
+<!--        deleteButton.className = 'delete-btn';-->
+<!--        deleteButton.onclick = function () {-->
+<!--            todoList.removeChild(todoItem);-->
+<!--        };-->
+
+<!--        todoItem.appendChild(taskSpan);-->
+<!--        todoItem.appendChild(editButton);-->
+<!--        todoItem.appendChild(deleteButton);-->
+
+<!--        todoList.appendChild(todoItem);-->
+<!--        taskInput.value = '';-->
+<!--    }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
