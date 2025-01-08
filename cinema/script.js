@@ -10,10 +10,15 @@ function kinoyarat(movieName, checkqilingan) {
     const movieText = document.createElement('span');
     movieText.textContent = movieName;
     const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Delete';
     deleteBtn.classList.add('delete-btn');
+    const trashIcon = document.createElement('i');
+    trashIcon.classList.add('fas', 'fa-trash');
+    deleteBtn.appendChild(trashIcon);
     deleteBtn.addEventListener('click', () => {
-        movieItem.remove();
+        movieItem.classList.add('fade-out');
+        setTimeout(() => {
+            movieItem.remove();
+        }, 500);
     });
     movieItem.appendChild(movieText);
     movieItem.appendChild(deleteBtn);
@@ -24,7 +29,6 @@ document.getElementById('saveBtn').addEventListener('click', function() {
     const movieName = movieInput.value.trim();
     const checkbox = document.querySelector('input[type="checkbox"]');
     const checkqilingan = checkbox.checked;
-
     if (movieName) {
         kinoyarat(movieName, checkqilingan);
         movieInput.value = '';

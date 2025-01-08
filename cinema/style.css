@@ -16,7 +16,7 @@ body {
 }
 
 span {
-    color: #ff7300;
+    color: #6488ff;
     font-size: 50px;
 }
 
@@ -36,7 +36,7 @@ span {
 .asos {
     width: 1300px;
     background-color: rgb(255, 255, 255);
-    color: #436cf3;
+    color: #ff5700;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,10 +56,11 @@ span {
 .input-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 
-input {
+input[type="text"] {
     height: 45px;
     padding: 10px;
     font-size: 18px;
@@ -67,6 +68,12 @@ input {
     border-radius: 5px;
     margin-right: 10px;
     width: 300px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+    cursor: pointer;
 }
 
 button {
@@ -78,7 +85,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color;
 }
 
 button:hover {
@@ -87,8 +94,9 @@ button:hover {
 
 input:focus {
     outline: none;
-    border-color: #ff5722;
+    border-color: #ff0000;
 }
+
 .movie-list {
     margin-top: 20px;
     list-style: none;
@@ -106,17 +114,29 @@ input:focus {
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
+    transition: opacity 0.5s ease;
+}
+
+.movie-item.fade-out {
+    opacity: 0;
 }
 
 .delete-btn {
-    background-color: #ff5722;
-    color: white;
+    background-color: transparent;
+    color: #000000;
     border: none;
     padding: 5px 10px;
     margin-left: 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn i {
+    font-size: 25px;
 }
 
 .delete-btn:hover {
