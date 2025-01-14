@@ -4,16 +4,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const nextButton = document.querySelector('.next');
     const prevButton = document.querySelector('.prev');
-
     function updateSlides() {
         slides.forEach((slide, index) => {
+            const info = slide.querySelector('.info');
             slide.classList.remove('active');
+            info.classList.remove('slide-in');
             if (index === activeIndex) {
                 slide.classList.add('active');
+                setTimeout(() => {
+                    info.classList.add('slide-in');
+                }, 100);
             }
         });
     }
-
     nextButton.addEventListener('click', function () {
         activeIndex = (activeIndex + 1) % slides.length;
         updateSlides();
