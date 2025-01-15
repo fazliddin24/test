@@ -2,7 +2,7 @@
 // let object = {
 //     'name': 'name','age': '12'
 // }
-let lis = [1, 2, 5, 7, 9, 11, 12, 15, 16, 17, 18, 19, 25, 100]
+// let lis = [1, 2, 5, 7, 9, 11, 12, 15, 16, 17, 18, 19, 25, 100]
 // console.log (object)
 
 //
@@ -78,9 +78,10 @@ let lis = [1, 2, 5, 7, 9, 11, 12, 15, 16, 17, 18, 19, 25, 100]
 
 let list = [12, 15, 11, 17, 16, 9, 5, 18, 100, 25, 2, 7, 19, 1];
 for (let i = 0; i < list.length; i++) {
-    if (i === list.length + 1) {
-        console.log(lis[i]);
-    } else {
-        console.log(lis[i]);
-    }
+    console.log(list[i])
+    // if (i === list.length + 1) {
+    //     console.log(lis[i]);
+    // } else {
+    //     console.log(lis[i]);
+    // }
 }
