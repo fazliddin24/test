@@ -1,5 +1,7 @@
 // let body = document.querySelector('body');
 // body.innerHTML +=   `<h1>Hello !!!</h1>`
+const football = document.querySelectorAll('.players-container');
+const popupIm = document.getElementById('popup-image');
 function addPlayerContainer() {
     const name = document.getElementById('name').value;
     const username = document.getElementById('username').value;
@@ -32,5 +34,20 @@ for (let edit_bt = 0; edit_bt < edit_btn.length; edit_bt++) {
     edit_btn[edit_bt].addEventListener('click', () => {
         index = edit_bt
         edit_btn[edit_bt].innerText = 'fazlidin'
+        popup.classList.add('visible');
     })
 }
+football.forEach(food => {
+    activeImage.addEventListener('click', () => {
+        popupImage.src = activeImage.querySelector('img').src
+        popup.classList.add('visible');
+    });
+});
+closeBtn.addEventListener('click', () => {
+    popup.classList.remove('visible');
+});
+popup.addEventListener('click', (e) => {
+    if (e.target !== popupImage && e.target !== closeBtn) {
+        popup.classList.remove('visible');
+    }
+});
