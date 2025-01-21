@@ -4,15 +4,12 @@ body {
     user-select: none;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     height: 100vh;
     background-image: url("bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #f4f4f4;
 }
-
 .edit-btn {
     position: absolute;
     top: 0;
@@ -26,19 +23,15 @@ body {
     font-size: 12px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-
-
 .edit-btn:hover {
     background-color: #e67e22;
 }
-
 .container {
     display: flex;
     width: 100%;
     margin: 20px;
     gap: 15px;
 }
-
 .register-container {
     width: 250px;
     background: linear-gradient(rgba(0, 34, 255, 0.7), rgba(255, 0, 204, 0.7) 50vh);
@@ -49,25 +42,21 @@ body {
     margin-left: 85px;
     margin-top: 300px;
 }
-
 .register-container h2 {
     text-align: center;
     margin-bottom: 15px;
     color: red;
 
 }
-
 .form-group {
     margin-bottom: 10px;
 }
-
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-size: 12px;
     color: #000000;
 }
-
 .form-group input {
     border: none;
     border-bottom: 2px solid #000000;
@@ -77,20 +66,15 @@ body {
     font-size: 16px;
     padding: 5px 0;
     width: 100%;
-    transition: border-color 0.5s ease; /* Animatsiya */
+    transition: border-color 0.5s ease;
 }
-
 input:focus {
-    border-bottom: 2px solid #ff0000; /* Fokusda qora rang */
+    border-bottom: 2px solid #ff0000;
 }
-
-
-
 .form-group input[type="checkbox"] {
     width: 250px;
     height: 20px;
 }
-
 .submit-btn {
     width: 100%;
     padding: 8px;
@@ -101,11 +85,9 @@ input:focus {
     font-size: 14px;
     cursor: pointer;
 }
-
 .submit-btn:hover {
     background: #0056b3;
 }
-
 .players-container {
     margin-left: 350px;
     margin-top: 110px;
@@ -114,7 +96,6 @@ input:focus {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
-
 .player-container {
     position: relative;
     width: 130px;
@@ -125,8 +106,6 @@ input:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
-
-
 .player-container img {
     width: 80px;
     height: 80px;
@@ -134,12 +113,10 @@ input:focus {
     margin-bottom: 10px;
     border: 2px solid #ddd;
 }
-
 .player-container h3 {
     font-size: 14px;
     margin-top: 10px;
 }
-
 .player-container2 {
     position: relative;
     width: 130px;
@@ -150,8 +127,6 @@ input:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
-
-
 .player-container2 img {
     width: 80px;
     height: 80px;
@@ -159,41 +134,62 @@ input:focus {
     margin-bottom: 10px;
     border: 2px solid #ddd;
 }
-
 .player-container2 h3 {
     font-size: 14px;
     margin-top: 10px;
 }
+.div1 {
+    position: relative;
+    background-color: #007bff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.x{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff4d4d;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.x:hover {
+    background-color: red;
 
-#popup {
+}
+.x h6 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    user-select: none;
+}
+.red {
+    background-color: #3498db;
+}
+
+.bgdiv {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.3s, opacity 0.3s;
+    transition: all 0.5s;
 }
 
-.visible {
-    visibility: visible !important;
-    opacity: 1 !important;
-}
 
-.popup .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    background: transparent;
-    border: none;
+.active {
+    bottom: 0 !important;
 }
