@@ -33,28 +33,15 @@
                 <label for="popular">Popular:</label>
                 <input type="checkbox" id="popular" name="popular">
             </div>
-            <button type="button" class="submit-btn" onclick="addPlayerContainer()">Submit</button>
+            <button type="button" class="submit-btn " id="submit-btn">Submit</button>
         </form>
     </div>
     <div class="players-container" id="playersContainer">
-        <div class="player-container">
-            <img id="popup-image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQyODSOKofIyOwVcLth5QYYXB0gFng2SXj52T2dpcAmDraJ5A9I6yW9E0rLm0fKlUBCTtOAWiFf1rylu9HTNRKI75NEX1NVIh9MZVpTs06Y">
-            <p><strong >Name:</strong> <span class="name">Crstiano Ronaldo</span></p>
-            <p><strong>Username:</strong> Ronaldo</p>
-            <button class="edit-btn">edit</button>
-
-        </div>
-        <div class="player-container2">
-            <img  src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQFKMXInl9o8bbejLkmF0XwEqCSmdiUSCSLF0-6OIe0cTpImNbo0K15t3n1gwzoQgZSnT9sLmRVe3Ck99NbOMWU462fqzrQFFVpc-YVYAvY">
-            <p><strong >Name:</strong> <span class="name">Crstiano Ronaldo</span></p>
-            <p><strong>Username:</strong> Ronaldo</p>
-            <button class="edit-btn">edit</button>
-        </div>
 
     </div>
     <div id="bgdiv" class="bgdiv">
         <div id="div" class="div1 red">
-            <div class="x" id="1215" onclick="closeBox()"><h6><span>X</span></h6></div>
+            <div class="x" id="1215" ><h6><span>X</span></h6></div>
             <h2>Register</h2>
             <form id="edit">
                 <div class="form-group">
@@ -78,7 +65,10 @@
                     <label for="popular">Popular:</label>
                     <input type="checkbox" id="popular1" name="popular">
                 </div>
-                <button type="button" class="submit-btn" onclick="change()">Submit</button>
+                <div class="buttons">
+                <button type="button" class="submit-btn1">Submit</button>
+                <button type="button" class="delete-btn">Delete</button></div>
+
             </form>
         </div>
     </div>
