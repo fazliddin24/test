@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #005e44, #1a1a48);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+.menu{
+    position: relative;
+
+}
+
+.player-container {
+    background: linear-gradient(to bottom, #009d73, #000080);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    z-index: 10;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.album-art {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    animation: spin 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.album-art img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: 20%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.controls button {
+    background-color: #bb0071;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #8c0055;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 78.5%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 80%;
+    }
+}
+
+#track-name {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#progress-line {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff0000, #000080);
+}
+
+#current-time {
+    margin-top: -30px;
+    margin-left: 185px;
+    color: red;
+    font-size: 14px;
+}
