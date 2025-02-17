@@ -64,8 +64,6 @@ nextBtn.addEventListener('click', () => {
         overlay.style.display = "none";
     }
 });
-progressLine.addEventListener('click',(event)
-})
 audio.addEventListener('timeupdate', updateProgressBar);
 
 
