@@ -164,6 +164,29 @@
 #
 # my_function("anvar", "anvarov")
 
+# class Calc:
+#     def __init__(self, num1, num2):
+#         self.num1 = num1
+#         self.num2 = num2
+#
+#     def __str__(self):
+#         return "Kalkulyator"
+#
+#     def plus(self):
+#         print(self.num1 + self.num2)
+#
+#     def plus2(self):
+#         print(self.num1 + self.num2)
+#
+#
+#
+# calc = Calc(20, 15)
+# print(calc)
+# calc.plus()
+#
+# calc.plus2()
+
+
 class Calc:
     def __init__(self, num1, num2):
         self.num1 = num1
@@ -175,13 +198,22 @@ class Calc:
     def plus(self):
         print(self.num1 + self.num2)
 
-    def plus2(self):
-        print(self.num1 + self.num2)
+    def minus(self):
+        print(self.num1 - self.num2)
 
+    def multiply(self):
+        print(self.num1 * self.num2)
 
+    def divide(self):
+        if self.num2 == 0:
+            print("Xatolik: nolga bo‘lish mumkin emas!")
+        else:
+            print(self.num1 / self.num2)
 
-calc = Calc(20, 15)
+calc = Calc(100, 15)
 print(calc)
 calc.plus()
+calc.minus()
+calc.multiply()
+calc.divide()
 
-calc.plus2()
