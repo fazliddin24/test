@@ -1,3 +1,53 @@
+# users = {
+#     "astron": {"password": "astron", "balance": 1000},
+#     "fazliddin": {"password": "astron", "balance": 2000}
+# }
+#
+#
+# def atm():
+#     username = input("Username: ")
+#     if username not in users:
+#         print("User not found!")
+#         return
+#
+#     password = input("Password: ")
+#     if users[username]["password"] != password:
+#         print("Incorrect password!")
+#         return
+#
+#     print("\nWelcome to the ATM!")
+#     while True:
+#         print("\nOptions:")
+#         print("1. Check Balance")
+#         print("2. Withdraw Money")
+#         print("3. Deposit Money")
+#         print("4. Exit")
+#
+#         choice = input("Choose an option (1-4): ")
+#
+#         if choice == "1":
+#             print(f"Your balance: ${users[username]['balance']}")
+#         elif choice == "2":
+#             amount = float(input("Enter amount to withdraw: "))
+#             if amount > users[username]['balance']:
+#                 print("Insufficient funds!")
+#             else:
+#                 users[username]['balance'] -= amount
+#                 print(f"Withdrawal successful! New balance: ${users[username]['balance']}")
+#         elif choice == "3":
+#             amount = float(input("Enter amount to deposit: "))
+#             users[username]['balance'] += amount
+#             print(f"Deposit successful! New balance: ${users[username]['balance']}")
+#         elif choice == "4":
+#             print("Exiting ATM. Goodbye!")
+#             break
+#         else:
+#             print("Invalid option. Try again!")
+#
+#
+# atm()
+#
+
 # a = int(input("1-sonni kiriting: "))
 # b = int(input("2-sonni kiriting: "))
 # amal = input("Amalni kiriting: ")
@@ -187,33 +237,96 @@
 # calc.plus2()
 
 
-class Calc:
-    def __init__(self, num1, num2):
-        self.num1 = num1
-        self.num2 = num2
+# class Calc:
+#     def __init__(self, num1, num2):
+#         self.num1 = num1
+#         self.num2 = num2
+#
+#     def __str__(self):
+#         return "Kalkulyator"
+#
+#     def plus(self):
+#         print(self.num1 + self.num2)
+#
+#     def minus(self):
+#         print(self.num1 - self.num2)
+#
+#     def multiply(self):
+#         print(self.num1 * self.num2)
+#
+#     def divide(self):
+#         if self.num2 == 0:
+#             print("Xatolik: nolga bo‘lish mumkin emas!")
+#         else:
+#             print(self.num1 / self.num2)
+#
+# calc = Calc(100, 15)
+# print(calc)
+# calc.plus()
+# calc.minus()
+# calc.multiply()
+# calc.divide()
+class Bankomat:
+    def __init__(self):
+        self.users = {
+            "ASTRON": {"parol": "1234", "balans": 10000},
+            "SHERBEK": {"parol": "1234", "balans": 20000}
+        }
 
-    def __str__(self):
-        return "Kalkulyator"
+    def kirish(self):
+        user = input("Foydalanuvchi nomi: ")
+        if user not in self.users:
+            print("Foydalanuvchi topilmadi!")
+            return None
 
-    def plus(self):
-        print(self.num1 + self.num2)
+        parol = input("Parol: ")
+        if self.users[user]["parol"] != parol:
+            print("Noto‘g‘ri parol!")
+            return None
 
-    def minus(self):
-        print(self.num1 - self.num2)
+        return user
 
-    def multiply(self):
-        print(self.num1 * self.num2)
+    def menyu(self):
+        print("\nBankomatga xush kelibsiz!")
+        for _ in range(100):
+            print("\nTanlovlar:")
+            print("1. Balansni tekshirish")
+            print("2. Pul yechish")
+            print("3. Pul kiritish")
 
-    def divide(self):
-        if self.num2 == 0:
-            print("Xatolik: nolga bo‘lish mumkin emas!")
+            option = input("Tanlovni kiriting (1-3): ")
+
+            if option == "1":
+                self.balansni_korsatish()
+            elif option == "2":
+                self.yechish()
+            elif option == "3":
+                self.kiritish()
+            else:
+                print("Noto‘g‘ri tanlov! Qayta urinib ko‘ring.")
+
+    def balansni_korsatish(self):
+        print(f"Sizning balansingiz: ${self.users[self.foy]['balans']}")
+
+    def yechish(self):
+        summa = float(input("Qancha pul yechmoqchisiz: "))
+        if summa > self.users[self.foy]['balans']:
+            print("Yetarli mablag‘ mavjud emas!")
         else:
-            print(self.num1 / self.num2)
+            self.users[self.foy]['balans'] -= summa
+            print(f"Pul muvaffaqiyatli yechildi! Yangi balans: ${self.users[self.foy]['balans']}")
 
-calc = Calc(100, 15)
-print(calc)
-calc.plus()
-calc.minus()
-calc.multiply()
-calc.divide()
+    def kiritish(self):
+        summa = float(input("Qancha pul kiritmoqchisiz: "))
+        self.users[self.foy]['balans'] += summa
+        print(f"Pul muvaffaqiyatli kiritildi! Yangi balans: ${self.users[self.foy]['balans']}")
+
+    def ishga_tushirish(self):
+        self.foy = self.kirish()
+        if self.foy:
+            self.menyu()
+
+
+bankomat = Bankomat()
+bankomat.ishga_tushirish()
 
