@@ -1,4 +1,7 @@
+
+                                                                
 <!doctype html>
+        
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,3 +38,31 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+# def my_function(ism, fam):
+#   print(ism + " " + fam)
+#
+# my_function("anvar", "anvarov")
+
+class Calc:
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
+
+    def __str__(self):
+        return "Kalkulyator"
+
+    def plus(self):
+        print(self.num1 + self.num2)
+
+    def plus2(self):
+        print(self.num1 + self.num2)
+
+
+
+calc = Calc(20, 15)
+print(calc)
+calc.plus()
+
+calc.plus2()
+                
