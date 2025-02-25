@@ -104,10 +104,10 @@
 # print(number)
 
 
-ishchi = {
-    "ism": 'SHerbek',
-    "oylik": 1500,
-}
+# ishchi = {
+#     "ism": 'SHerbek',
+#     "oylik": 1500,
+# }
 
 # def oylik_hisob():
 #     oy = int(input("Neca oy ishladi ? "))
@@ -118,15 +118,15 @@ ishchi = {
 #     print(f"{ishchi['ism']} {oy} oy jami {jami}$ ish haqi oladi.")
 # oylik_hisob()
 
-def oylik_hisob():
-    oy = int(input("Necha oy ishladi? "))
-    jami = 0
-    i = 1
-    while i <= oy:
-        jami += ishchi["oylik"]
-        i += 1
-    print(f"{ishchi['ism']} {oy} oy jami {jami}$ ish haqi oladi.")
-oylik_hisob()
+# def oylik_hisob():
+#     oy = int(input("Necha oy ishladi? "))
+#     jami = 0
+#     i = 1
+#     while i <= oy:
+#         jami += ishchi["oylik"]
+#         i += 1
+#     print(f"{ishchi['ism']} {oy} oy jami {jami}$ ish haqi oladi.")
+# oylik_hisob()
 
 #
 # def qosh(x, y):
@@ -158,3 +158,30 @@ oylik_hisob()
 #
 #
 #
+
+# def my_function(ism, fam):
+#   print(ism + " " + fam)
+#
+# my_function("anvar", "anvarov")
+
+class Calc:
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
+
+    def __str__(self):
+        return "Kalkulyator"
+
+    def plus(self):
+        print(self.num1 + self.num2)
+
+    def plus2(self):
+        print(self.num1 + self.num2)
+
+
+
+calc = Calc(20, 15)
+print(calc)
+calc.plus()
+
+calc.plus2()
