@@ -47,6 +47,7 @@
 #
 # atm()
 #
+import random
 
 # a = int(input("1-sonni kiriting: "))
 # b = int(input("2-sonni kiriting: "))
@@ -422,3 +423,31 @@
 # sayhello()
 # import module
 # module.sayhello()
+
+
+# /random
+
+# import random
+#
+# son = [2,3,5,4,8,9,6]
+# captain = random.choice(son)
+#
+# print(captain)
+
+# print(random.randint(10, 100))
+
+
+# /pathlib
+
+from pathlib import Path
+#
+# path = Path("../1-lesson")
+# print(path.exists())
+
+# path = Path("new_directory")
+# path.mkdir() papka yarat
+# path.rmdir() papka ochir
+
+# path =Path()
+# for file  in path.glob("../1-lesson/*.py"):
+#     print(file)
