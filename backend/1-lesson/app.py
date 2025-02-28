@@ -266,67 +266,159 @@
 # calc.minus()
 # calc.multiply()
 # calc.divide()
-class Bankomat:
-    def __init__(self):
-        self.users = {
-            "ASTRON": {"parol": "1234", "balans": 10000},
-            "SHERBEK": {"parol": "1234", "balans": 20000}
-        }
+# class Bankomat:
+#     def __init__(self):
+#         self.users = {
+#             "ASTRON": {"parol": "1234", "balans": 10000},
+#             "SHERBEK": {"parol": "1234", "balans": 20000},
+#             "astron": {"parol": "1234", "balans": 10000},
+#             "sherbek": {"parol": "1234", "balans": 20000}
+#         }
+#
+#     def kirish(self):
+#         user = input("Foydalanuvchi nomi: ")
+#         if user not in self.users:
+#             print("Foydalanuvchi topilmadi!")
+#             return None
+#
+#         parol = input("Parol: ")
+#         if self.users[user]["parol"] != parol:
+#             print("Noto‘g‘ri parol!")
+#             return None
+#
+#         return user
+#
+#     def menyu(self):
+#         print("\nBankomatga xush kelibsiz!")
+#         for x in range(100):
+#             print("\nTanlovlar:")
+#             print("1. Balansni tekshirish")
+#             print("2. Pul yechish")
+#             print("3. Pul kiritish")
+#
+#             option = input("Tanlovni kiriting (1-3): ")
+#
+#             if option == "1":
+#                 self.balansni()
+#             elif option == "2":
+#                 self.yechish()
+#             elif option == "3":
+#                 self.kiritish()
+#             else:
+#                 print("Noto‘g‘ri buyruq! Qayta urinib ko‘ring.")
+#
+#     def balansni(self):
+#         print(f"Sizning balansingiz: ${self.users[self.foy]['balans']}")
+#
+#     def yechish(self):
+#         summa = float(input("Qancha pul yechmoqchisiz: "))
+#         if summa > self.users[self.foy]['balans']:
+#             print("Yetarli mablag‘ mavjud emas!")
+#         else:
+#             self.users[self.foy]['balans'] -= summa
+#             print(f"Pul muvaffaqiyatli yechildi! Yangi balans: ${self.users[self.foy]['balans']}")
+#
+#     def kiritish(self):
+#         summa = float(input("Qancha pul kiritmoqchisiz: "))
+#         self.users[self.foy]['balans'] += summa
+#         print(f"Pul muvaffaqiyatli kiritildi! Yangi balans: ${self.users[self.foy]['balans']}")
+#
+#     def ishga_tushirish(self):
+#         self.foy = self.kirish()
+#         if self.foy:
+#             self.menyu()
+#
+#
+# bankomat = Bankomat()
+# bankomat.ishga_tushirish()
 
-    def kirish(self):
-        user = input("Foydalanuvchi nomi: ")
-        if user not in self.users:
-            print("Foydalanuvchi topilmadi!")
-            return None
 
-        parol = input("Parol: ")
-        if self.users[user]["parol"] != parol:
-            print("Noto‘g‘ri parol!")
-            return None
-
-        return user
-
-    def menyu(self):
-        print("\nBankomatga xush kelibsiz!")
-        for _ in range(100):
-            print("\nTanlovlar:")
-            print("1. Balansni tekshirish")
-            print("2. Pul yechish")
-            print("3. Pul kiritish")
-
-            option = input("Tanlovni kiriting (1-3): ")
-
-            if option == "1":
-                self.balansni_korsatish()
-            elif option == "2":
-                self.yechish()
-            elif option == "3":
-                self.kiritish()
-            else:
-                print("Noto‘g‘ri tanlov! Qayta urinib ko‘ring.")
-
-    def balansni_korsatish(self):
-        print(f"Sizning balansingiz: ${self.users[self.foy]['balans']}")
-
-    def yechish(self):
-        summa = float(input("Qancha pul yechmoqchisiz: "))
-        if summa > self.users[self.foy]['balans']:
-            print("Yetarli mablag‘ mavjud emas!")
-        else:
-            self.users[self.foy]['balans'] -= summa
-            print(f"Pul muvaffaqiyatli yechildi! Yangi balans: ${self.users[self.foy]['balans']}")
-
-    def kiritish(self):
-        summa = float(input("Qancha pul kiritmoqchisiz: "))
-        self.users[self.foy]['balans'] += summa
-        print(f"Pul muvaffaqiyatli kiritildi! Yangi balans: ${self.users[self.foy]['balans']}")
-
-    def ishga_tushirish(self):
-        self.foy = self.kirish()
-        if self.foy:
-            self.menyu()
+# ishchi  oyligi 3.000.000 avansi 40% iga yani 1.200.000 ga teng
+# uni davlatga tolanadigan qismi 20% yani 600.000
+# dars soati 20 dan otsa 400.000 yana qoshiladi
+# bunda pul yechish qismi boladi
+# pul yechish bosilganda birinchi avans dan olinadi
+# keyin oylikka otadi 3.000.000 umumiy balans uni ichiga avans ham kiradi
+# davlatga tolanmagan false bolsa davlatga tolash bolimi ham boladi va pulning 20% yechib olinadi
 
 
-bankomat = Bankomat()
-bankomat.ishga_tushirish()
+# class Ishchi:
+#     def __init__(self):
+#         self.umumiy_balans = 3000000
+#         self.avans = 1200000
+#         self.oylik = self.umumiy_balans - self.avans
+#         self.davlatga = False
+#
+#     def balans(self):
+#         print(f"Jami balans: {self.umumiy_balans} so'm")
+#         print(f"Avans qismi: {self.avans} so'm")
+#         print(f"Davlatga to'langan: {'Ha' if self.davlatga else 'Yo‘q'}")
+#
+#     def yechish(self, summa):
+#         if summa <= self.avans:
+#             self.avans -= summa
+#             self.umumiy_balans -= summa
+#         elif summa <= self.umumiy_balans:
+#             summa -= self.avans
+#             self.umumiy_balans -= summa
+#             self.avans = 0
+#         else:
+#             print("Yetarli mablag‘ yo‘q!")
+#             return
+#         print(f"{summa} so'm muvaffaqiyatli yechildi. Yangi balans: {self.umumiy_balans} so'm")
+#
+#     def davlat_tolash(self):
+#         if not self.davlatga:
+#             davlat = self.umumiy_balans * 0.2
+#             if self.umumiy_balans >= davlat:
+#                 self.avans -= davlat
+#                 self.umumiy_balans -= self.avans
+#                 self.davlatga = True
+#                 print(f"{davlat} so'm davlatga to‘landi. Qolgan balans: {self.umumiy_balans} so'm")
+#             else:
+#                 print("Yetarli mablag‘ yo‘q!")
+#         else:
+#             print("Davlatga allaqachon to‘langan!")
+#
+#     def bonus(self, soat):
+#         if soat >= 20:
+#             self.umumiy_balans += 400000
+#             print(f"Qo‘shimcha bonus qo‘shildi! Yangi balans: {self.umumiy_balans} so'm")
+#
+#     def ishga_tushir(self):
+#         while True:
+#             print("\nTanlovlar:")
+#             print("1. Balansni tekshirish")
+#             print("2. Pul yechish")
+#             print("3. Davlatga to‘lash")
+#             print("4. Dars soati bonus qo‘shish")
+#
+#             tanlov = input("Tanlovni kiriting (1-4): ")
+#
+#             if tanlov == "1":
+#                 self.balans()
+#             elif tanlov == "2":
+#                 summa = int(input("Qancha pul yechmoqchisiz: "))
+#                 self.yechish(summa)
+#             elif tanlov == "3":
+#                 self.davlat_tolash()
+#             elif tanlov == "4":
+#                 soat = int(input("Dars necha soat: "))
+#                 self.bonus(soat)
+#
+#             else:
+#                 print("Noto‘g‘ri buyruq! Qayta urinib ko‘ring.")
+#
+#
+# ishchi = Ishchi()
+# ishchi.ishga_tushir()
 
+
+
+# /module
+
+
+# from module import sayhello
+# sayhello()
+# import module
+# module.sayhello()
