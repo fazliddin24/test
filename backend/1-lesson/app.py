@@ -346,13 +346,15 @@ import random
 class Ishchi:
     def __init__(self):
         self.umumiy_balans = 3000000
-        self.avans = 1200000
-        self.oylik = self.umumiy_balans - self.avans
+        self.avans = self.umumiy_balans * 0.4
         self.davlatga = False
+
     def balans(self):
+        self.avans = self.umumiy_balans * 0.4
         print(f"Jami balans: {self.umumiy_balans} so'm")
         print(f"Avans qismi: {self.avans} so'm")
         print(f"Davlatga to'langan: {'Ha' if self.davlatga else 'Yo‘q'}")
+
     def yechish(self, summa):
         if summa <= self.umumiy_balans:
             self.umumiy_balans -= summa
@@ -360,9 +362,10 @@ class Ishchi:
             print("Yetarli mablag‘ yo‘q!")
             return
         print(f"{summa} so'm muvaffaqiyatli yechildi. Yangi balans: {self.umumiy_balans} so'm")
+
     def davlat_tolash(self):
         if not self.davlatga:
-            davlat = self.umumiy_balans * 0.4
+            davlat = self.umumiy_balans * 0.2
             if self.umumiy_balans >= davlat:
                 self.umumiy_balans -= davlat
                 self.davlatga = True
@@ -371,12 +374,14 @@ class Ishchi:
                 print("Yetarli mablag‘ yo‘q!")
         else:
             print("Davlatga allaqachon to‘langan!")
+
     def bonus(self, soat):
         if soat >= 20:
             self.umumiy_balans += 400000
             print(f"Qo‘shimcha bonus qo‘shildi! Yangi balans: {self.umumiy_balans} so'm")
 
     def avans_olish(self):
+        self.avans = self.umumiy_balans * 0.4
         if self.avans > 0:
             if self.avans < 1200000:
                 print(f"Avans {self.avans} so‘m dan kam! Hamma mablag‘ yechildi: {self.umumiy_balans} so‘m")
@@ -387,6 +392,7 @@ class Ishchi:
             self.avans = 0
         else:
             print("Avans allaqachon olingan!")
+
     def ishga_tushir(self):
         while True:
             print("\nTanlovlar:")
@@ -395,6 +401,7 @@ class Ishchi:
             print("3. Davlatga to‘lash")
             print("4. Dars soati bonus qo‘shish")
             print("5. Avans olish")
+
             tanlov = input("Tanlovni kiriting (1-5): ")
             if tanlov == "1":
                 self.balans()
