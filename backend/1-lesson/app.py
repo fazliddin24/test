@@ -334,6 +334,8 @@ import random
 # bankomat.ishga_tushirish()
 
 
+
+
 # ishchi  oyligi 3.000.000 avansi 40% iga yani 1.200.000 ga teng
 # uni davlatga tolanadigan qismi 20% yani 600.000
 # dars soati 20 dan otsa 400.000 yana qoshiladi
@@ -343,84 +345,86 @@ import random
 # davlatga tolanmagan false bolsa davlatga tolash bolimi ham boladi va pulning 20% yechib olinadi
 
 
-class Ishchi:
-    def __init__(self):
-        self.umumiy_balans = 3000000
-        self.avans = self.umumiy_balans * 0.4
-        self.davlatga = False
 
-    def balans(self):
-        self.avans = self.umumiy_balans * 0.4
-        print(f"Jami balans: {self.umumiy_balans} so'm")
-        print(f"Avans qismi: {self.avans} so'm")
-        print(f"Davlatga to'langan: {'Ha' if self.davlatga else 'Yo‘q'}")
+#
+# class Ishchi:
+#     def __init__(self):
+#         self.umumiy_balans = 3000000
+#         self.avans = self.umumiy_balans * 0.4
+#         self.davlatga = False
+#     def balans(self):
+#         print(f"Jami balans: {self.umumiy_balans} so'm")
+#         print(f"Avans qismi : {self.avans} so'm")
+#         print(f"Davlatga to'langan: {'Ha' if self.davlatga else 'Yo‘q'}")
+#
+#     def yechish(self, summa):
+#         if summa <= self.umumiy_balans:
+#             self.umumiy_balans -= summa
+#         else:
+#             print("Yetarli mablag‘ yo‘q!")
+#             return
+#         print(f"{summa} so'm muvaffaqiyatli yechildi. Yangi balans: {self.umumiy_balans} so'm")
+#
+#     def davlat_tolash(self):
+#         if not self.davlatga:
+#             davlat = self.umumiy_balans * 0.2
+#             if self.umumiy_balans >= davlat:
+#                 self.umumiy_balans -= davlat
+#                 self.davlatga = True
+#                 print(f"{davlat} so'm davlatga to‘landi. Qolgan balans: {self.umumiy_balans} so'm")
+#             else:
+#                 print("Yetarli mablag‘ yo‘q!")
+#         else:
+#             print("Davlatga allaqachon to‘langan!")
+#
+#     def bonus(self, soat):
+#         if soat >= 20:
+#             self.umumiy_balans += 400000
+#             self.avans = self.umumiy_balans * 0.4
+#             print(f"Qo‘shimcha bonus qo‘shildi! Yangi balans: {self.umumiy_balans} so'm")
+#
+#     def avans_olish(self):
+#         if self.avans > 0:
+#             if self.avans < self.umumiy_balans * 0.4:
+#                 print(f"Avans {self.avans} so‘m dan kam! Hamma mablag‘ yechildi: {self.umumiy_balans} so‘m")
+#                 self.umumiy_balans = 0
+#             else:
+#                 self.umumiy_balans -= self.avans
+#                 print(f"{self.avans} so'm avans olindi. Yangi balans: {self.umumiy_balans} so'm")
+#             self.avans = 0
+#         else:
+#             print("Avans allaqachon olingan!")
+#
+#     def ishga_tushir(self):
+#         while True:
+#             print("\nTanlovlar:")
+#             print("1. Balansni tekshirish")
+#             print("2. Pul yechish")
+#             print("3. Davlatga to‘lash")
+#             print("4. Dars soati bonus qo‘shish")
+#             print("5. Avans olish")
+#
+#             tanlov = input("Tanlovni kiriting (1-5): ")
+#             if tanlov == "1":
+#                 self.balans()
+#             elif tanlov == "2":
+#                 summa = int(input("Qancha pul yechmoqchisiz: "))
+#                 self.yechish(summa)
+#             elif tanlov == "3":
+#                 self.davlat_tolash()
+#             elif tanlov == "4":
+#                 soat = int(input("Dars necha soat: "))
+#                 self.bonus(soat)
+#             elif tanlov == "5":
+#                 self.avans_olish()
+#             else:
+#                 print("Noto‘g‘ri buyruq! Qayta urinib ko‘ring.")
+#
+#
+# ishchi = Ishchi()
+# ishchi.ishga_tushir()
 
-    def yechish(self, summa):
-        if summa <= self.umumiy_balans:
-            self.umumiy_balans -= summa
-        else:
-            print("Yetarli mablag‘ yo‘q!")
-            return
-        print(f"{summa} so'm muvaffaqiyatli yechildi. Yangi balans: {self.umumiy_balans} so'm")
 
-    def davlat_tolash(self):
-        if not self.davlatga:
-            davlat = self.umumiy_balans * 0.2
-            if self.umumiy_balans >= davlat:
-                self.umumiy_balans -= davlat
-                self.davlatga = True
-                print(f"{davlat} so'm davlatga to‘landi. Qolgan balans: {self.umumiy_balans} so'm")
-            else:
-                print("Yetarli mablag‘ yo‘q!")
-        else:
-            print("Davlatga allaqachon to‘langan!")
-
-    def bonus(self, soat):
-        if soat >= 20:
-            self.umumiy_balans += 400000
-            print(f"Qo‘shimcha bonus qo‘shildi! Yangi balans: {self.umumiy_balans} so'm")
-
-    def avans_olish(self):
-        self.avans = self.umumiy_balans * 0.4
-        if self.avans > 0:
-            if self.avans < 1200000:
-                print(f"Avans {self.avans} so‘m dan kam! Hamma mablag‘ yechildi: {self.umumiy_balans} so‘m")
-                self.umumiy_balans = 0
-            else:
-                self.umumiy_balans -= self.avans
-                print(f"{self.avans} so'm avans olindi. Yangi balans: {self.umumiy_balans} so'm")
-            self.avans = 0
-        else:
-            print("Avans allaqachon olingan!")
-
-    def ishga_tushir(self):
-        while True:
-            print("\nTanlovlar:")
-            print("1. Balansni tekshirish")
-            print("2. Pul yechish")
-            print("3. Davlatga to‘lash")
-            print("4. Dars soati bonus qo‘shish")
-            print("5. Avans olish")
-
-            tanlov = input("Tanlovni kiriting (1-5): ")
-            if tanlov == "1":
-                self.balans()
-            elif tanlov == "2":
-                summa = int(input("Qancha pul yechmoqchisiz: "))
-                self.yechish(summa)
-            elif tanlov == "3":
-                self.davlat_tolash()
-            elif tanlov == "4":
-                soat = int(input("Dars necha soat: "))
-                self.bonus(soat)
-            elif tanlov == "5":
-                self.avans_olish()
-            else:
-                print("Noto‘g‘ri buyruq! Qayta urinib ko‘ring.")
-
-
-ishchi = Ishchi()
-ishchi.ishga_tushir()
 
 # /module
 
